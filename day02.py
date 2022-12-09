@@ -1,11 +1,5 @@
 def calcTotalScore(strategyFile):
     valuesPlayerShapes = {"X": 1, "Y": 2, "Z": 3}
-    '''
-    Rock beats Scissors 1 - 3 = -2
-    Scissors beats Paper 3 - 2 = 1
-    Paper beats Rock 2 - 1 = 1
-
-    '''
     strategyWinMap = {"A": "Y", "B": "Z", "C": "X"}
     strategyDrawMap = {"A": "X", "B": "Y", "C": "Z"}
     strategyLostMap = {"A": "Z", "B": "X", "C": "Y"}
@@ -20,4 +14,8 @@ def calcTotalScore(strategyFile):
                 sumScore += valuesPlayerShapes[line[2]]
     print("total score: ", sumScore)
 
+print("-------- Example guide  ------------")
 calcTotalScore("testday02.out")
+
+print("-------- Official guide  ------------")
+calcTotalScore("day02.out")
